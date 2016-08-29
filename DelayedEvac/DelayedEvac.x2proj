@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Guid>6276fc30-7ea1-4e1a-8451-7753aadbe833</Guid>
+    <Name>Delayed Evac</Name>
+    <Description>Configurable change to evacuation that delays the evacuation zone appearing for a few turns. Part of Guerrilla War</Description>
+    <SteamPublishID>0</SteamPublishID>
+    <AssemblyName>DelayedEvac</AssemblyName>
+    <RootNamespace>DelayedEvac</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Config\XComDelayedEvac.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComEditor.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComEngine.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGame.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\DelayedEvac_Assets.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\XComGame.int">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ReadMe.txt" />
+    <Content Include="Src\DelayedEvac\Classes\DelayedEvac_Ability_PlaceEvacZone.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\DelayedEvac\Classes\DelayedEvac_GameState_EvacZoneSpawner.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\DelayedEvac\Classes\DelayedEvac_X2TargetingMethod_EvacZone.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\DelayedEvac\Classes\X2DownloadableContentInfo_DelayedEvac.uc">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Config" />
+    <Folder Include="Content" />
+    <Folder Include="Localization" />
+    <Folder Include="Src" />
+    <Folder Include="Src\DelayedEvac" />
+    <Folder Include="Src\DelayedEvac\Classes" />
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
+</Project>
