@@ -27,7 +27,9 @@
     <Content Include="Localization\XComGame.int">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ReadMe.txt" />
+    <Content Include="ModPreview.jpg">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Src\DelayedEvac\Classes\DelayedEvac_Ability_PlaceEvacZone.uc">
       <SubType>Content</SubType>
     </Content>
