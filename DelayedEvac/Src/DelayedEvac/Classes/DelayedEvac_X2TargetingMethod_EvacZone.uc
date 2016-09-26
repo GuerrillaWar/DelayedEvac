@@ -9,11 +9,6 @@ static function bool ValidateEvacArea( const out TTile EvacCenterLoc, bool Inclu
 
 	class'XComGameState_EvacZone'.static.GetEvacMinMax2D( EvacCenterLoc, EvacMin, EvacMax );
 
-	if( IncludeSoldiers && EvacZoneContainsXComUnit(EvacMin, EvacMax) )
-	{
-		return false;
-	}
-
 	NumTiles = (EvacMax.X - EvacMin.X + 1) * (EvacMax.Y - EvacMin.Y + 1);
 
 	TestTile = EvacMin;
