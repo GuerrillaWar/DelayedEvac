@@ -5,6 +5,7 @@ var() protectedwrite Vector CenterLocationV;
 var config int EvacCountdownTurns;
 var config int EvacCallCooldownTurns;
 var config int ExclusionRadius;
+var config bool ExclusionRadiusVisible;
 
 // The number of player turns remaining before the zone spawns
 var int Countdown;
@@ -276,7 +277,7 @@ function BuildVisualizationForSpawnerCreation(XComGameState VisualizeGameState, 
 	BuildTrack.StateObject_OldState = SpawnerState;
 	BuildTrack.StateObject_NewState = SpawnerState;
 
-	if (default.ExclusionRadius != 0)
+	if (default.ExclusionRadius != 0 && default.ExclusionRadiusVisible)
 	{
 		SetupExclusionRing(VisualizeGameState, BuildTrack, true);
 	}
@@ -309,7 +310,7 @@ function BuildVisualizationForEvacSuccess(XComGameState VisualizeGameState, out 
 	BuildTrack.StateObject_OldState = SpawnerState;
 	BuildTrack.StateObject_NewState = SpawnerState;
 
-	if (default.ExclusionRadius != 0)
+	if (default.ExclusionRadius != 0 && default.ExclusionRadiusVisible)
 	{
 		SetupExclusionRing(VisualizeGameState, BuildTrack, false);
 	}
@@ -344,7 +345,7 @@ function BuildVisualizationForEvacTooHot(XComGameState VisualizeGameState, out a
 	BuildTrack.StateObject_OldState = SpawnerState;
 	BuildTrack.StateObject_NewState = SpawnerState;
 
-	if (default.ExclusionRadius != 0)
+	if (default.ExclusionRadius != 0 && default.ExclusionRadiusVisible)
 	{
 		SetupExclusionRing(VisualizeGameState, BuildTrack, false);
 	}
